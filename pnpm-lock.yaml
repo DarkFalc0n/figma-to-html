@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  fs:
+    specifier: 0.0.1-security
+    version: 0.0.1-security
+
 devDependencies:
   '@figma/plugin-typings':
     specifier: ^1.69.0
@@ -17,6 +22,10 @@ packages:
   /@figma/plugin-typings@1.69.0:
     resolution: {integrity: sha512-DAGuGGxM1saT8OVm7gqAldQCyRswRDWeHL/oodDQbus6jK3ypYMl722ItFxc/yWr5HDJbC3FO0u/bvxw2/xqGA==}
     dev: true
+
+  /fs@0.0.1-security:
+    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==}
+    dev: false
 
   /typescript@5.1.6:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
