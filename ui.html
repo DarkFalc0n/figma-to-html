@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI</title>
+    </head>
+    <body>
+        <div id="container" style="display: hidden;">
+            <h3 >Your zip is ready</h3>
+            <p>Click the button below to zip your files</p>
+            <a href="" download="download.zip">
+                <button id="zip">
+                    Download
+                </button>
+            </a>
+    
+        <script>
+            onmessage = (event) => {                    
+                    document.getElementById('container').style.display = 'block'
+                    document.querySelector('a').href = event.data.pluginMessage
+                }
+        </script>
+    </body>
+</html>
