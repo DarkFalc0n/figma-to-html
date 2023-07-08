@@ -1,9 +1,18 @@
 import { handleCss } from './cssHandler'
 
+interface cssObjectVal {
+    codegen: Promise<any>
+    type: string
+    x: number
+    y: number
+}
+
 export const Traversal = (
     node: FrameNode | GroupNode,
     classPrefix: string,
-    cssObject: { [key: string]: Promise<string> }
+    cssObject: {
+        [classname: string]: cssObjectVal
+    }
 ): string => {
     return `<div class="${node.name.split(' ').join('_')}">\n${node.children
         .map((child) => {
@@ -22,7 +31,14 @@ export const Traversal = (
                 const cssData = handleCss(
                     child as TextNode | RectangleNode | EllipseNode
                 )
-                cssObject[className] = cssData
+                const cssObjectValue: cssObjectVal = {
+                    codegen: cssData,
+                    type: child.type,
+                    x: child.x,
+                    y: child.y,
+                }
+                cssObject[className] = cssObjectValue
+                console.log(className, child.type)
                 if (child.type == 'TEXT') {
                     return `<div class="${className}">${child.characters}</div>`
                 } else {
