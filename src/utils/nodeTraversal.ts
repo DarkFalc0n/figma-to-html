@@ -1,12 +1,9 @@
-interface cssObject {
-    css: string
-}
 import { handleCss } from './cssHandler'
 
 export const Traversal = (
     node: FrameNode | GroupNode,
     classPrefix: string,
-    cssObject: cssObject
+    cssObject: { [key: string]: Promise<string> }
 ): string => {
     return `<div class="${node.name.split(' ').join('_')}">\n${node.children
         .map((child) => {
@@ -25,7 +22,7 @@ export const Traversal = (
                 const cssData = handleCss(
                     child as TextNode | RectangleNode | EllipseNode
                 )
-                cssObject.css += `.${className} {\n${cssData}\n}\n`
+                cssObject[className] = cssData
                 if (child.type == 'TEXT') {
                     return `<div class="${className}">${child.characters}</div>`
                 } else {

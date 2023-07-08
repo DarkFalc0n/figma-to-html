@@ -4,7 +4,7 @@ export const generateHTML = (htmlData: string): string => {
                     <head>
                         <meta charset="UTF-8">
                         <title>figma to html</title>
-                        <link rel="stylesheet" href="style.css">
+                        <link rel="stylesheet" href="styles.css">
                     </head>
                     <body>
                         ${htmlData}

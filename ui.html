@@ -4,10 +4,10 @@
         <title>UI</title>
     </head>
     <body>
-        <div id="container" style="display: hidden;">
+        <div id="container" style="display: hidden; color: white; font-family: sans-serif;">
             <h3 >Your zip is ready</h3>
-            <p>Click the button below to zip your files</p>
-            <a href="" download="download.zip">
+            <p>Click the button below to download your file</p>
+            <a href="" download="figma-to-html.zip">
                 <button id="zip">
                     Download
                 </button>
@@ -18,6 +18,7 @@
                     document.getElementById('container').style.display = 'block'
                     document.querySelector('a').href = event.data.pluginMessage
                 }
+                
         </script>
     </body>
 </html>
