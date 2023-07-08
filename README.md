@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/webpack-white?logo=webpack&style=for-the-badge)
 
 
-One click UI plugin for figma to download a given frame as a zipped file containing the index.html and styles.css. To use, make sure you select a frame in figma and then start the plugin. In the UI that pops up, use the 'Download' button to download the zip.
+One click UI plugin for figma to download a given frame as a zipped file containing the index.html and styles.css. To use, make sure you select a frame in figma and then start the plugin from the right-click menu. In the UI that pops up, use the 'Download' button to download the zip.
 
 ---
 ### This plugin is at a developmental stage and only supports RectangleNode, EllipseNode and TextNode for now.
